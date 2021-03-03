@@ -1,9 +1,19 @@
 package com.xiaokang;
 
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println("hello");
+        Result result = JUnitCore.runClasses(SubstituteTest.class);
+
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
+        }
+
+        System.out.println(result.wasSuccessful());
     }
 }
