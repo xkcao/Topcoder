@@ -2,11 +2,10 @@ package com.xiaokang;
 
 public class TurretDefense {
     public  int firstMiss(int[] xs, int[] ys, int[] times){
-        int result=0;
 
-        int i=0;
+        int i;
         for(i=0;i<xs.length;i++){
-            int timeNeeded = 0;
+            int timeNeeded;
             if(i==0){
                 timeNeeded = xs[0]+ys[0];
             }

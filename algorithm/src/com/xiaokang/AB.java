@@ -56,14 +56,11 @@ Returns: "BAABBABAAB"
 
         StringBuilder result=new StringBuilder();
         //build base String will all B
-        for(int i=0;i<N;i++)
-        {
-            result.append('B');
-        }
+        result.append("B".repeat(Math.max(0, N)));
 
         //replace char with A at the right positions
-        for(int i=0;i<positionAList.size();i++){
-            result.setCharAt(positionAList.get(i),'A');
+        for (Integer integer : positionAList) {
+            result.setCharAt(integer, 'A');
         }
 
         //for all remaining A, leave them to the far right end
@@ -83,7 +80,7 @@ Returns: "BAABBABAAB"
      * @return the smallest number of A or 0
      */
     public int smallestNumberOfA(int N, int K){
-        int i=0;
+        int i;
         for(i=1;i<=N;i++){
             if(K<= i*(N-i)) break;
         }
