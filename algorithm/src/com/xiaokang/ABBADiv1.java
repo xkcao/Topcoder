@@ -1,5 +1,8 @@
 package com.xiaokang;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class ABBADiv1 {
     /*
 0)
@@ -32,25 +35,21 @@ Returns: "Impossible"
      */
     public  String canObtain(String initial, String target){
 
-        if(initial.length()==target.length()){
-            return (initial.equalsIgnoreCase(target))?"Possible":"Impossible";
-        }
+        Deque<String> targetQueue = new ArrayDeque();
+        targetQueue.addLast(target);
+        while (targetQueue.size()>0){
+            String firstElement = targetQueue.removeFirst();
+            if(firstElement.length()==initial.length() && initial.equalsIgnoreCase(firstElement)){
+                return "Possible";
+            }else if(firstElement.length()>initial.length()){
+                if(firstElement.charAt(firstElement.length()-1)=='A'){
+                    targetQueue.addLast(firstElement.substring(0,firstElement.length()-1));
+                }
 
-        if (target.charAt(target.length()-1)=='A' && target.charAt(0)=='B'){
-            if (canObtain(initial,target.substring(0,target.length()-1)).equalsIgnoreCase("Possible") ||
-            canObtain(initial,reverseString(target.substring(1))).equalsIgnoreCase("Possible")){
-                return  "Possible";
+                if(firstElement.charAt(0)=='B'){
+                    targetQueue.addLast(reverseString(firstElement.substring(1)));
+                }
             }
-        } else if (target.charAt(target.length()-1)=='A' &&
-                canObtain(initial,target.substring(0,target.length()-1)).equalsIgnoreCase("Possible") ) {
-            return "Possible";
-        }else if(target.charAt(0)=='B' &&
-                canObtain(initial,reverseString(target.substring(1))).equalsIgnoreCase("Possible")
-        ){
-            return "Possible";
-        }
-        else{
-            return  "Impossible";
         }
 
         return "Impossible";
