@@ -12,7 +12,11 @@ public class Main {
 //        ABBAReplace abbaReplace = new ABBAReplace();
 //        System.out.println(abbaReplace.countSteps("AABAA",17,47474747,1000000000));
 
-        ABC abc = new ABC();
-        System.out.println(abc.createString(15,36));
+//        ABC abc = new ABC();
+//        System.out.println(abc.createString(15,36));
+
+        ABCPath abcPath = new ABCPath();
+        String[] grid = { "BCDEFGHIJKLMNOPQRSTUVWXYZ" };
+        System.out.println(abcPath.length(grid));
     }
 }
