@@ -59,18 +59,18 @@ The string you should generate is S = "AABAAABAAABBBAAAA". The sequence of value
 
     public String getStringS(String Sprefix, int N, int seed, int threshold){
         long state = seed;
-        String S = Sprefix;
+        StringBuilder S = new StringBuilder(Sprefix);
         while (S.length() < N) {
             state = ((state * 1103515245 + 12345)) % ( (long)Math.pow(2,31));
             if (state<threshold) {
-                S += 'A';
+                S.append('A');
             }
             else {
-                S += 'B';
+                S.append('B');
             }
         }
 
-        return  S;
+        return S.toString();
     }
 
     public String replaceABwithBA(String input){

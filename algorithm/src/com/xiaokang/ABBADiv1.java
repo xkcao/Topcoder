@@ -3,6 +3,7 @@ package com.xiaokang;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+@SuppressWarnings("rawtypes")
 public class ABBADiv1 {
     /*
 0)
@@ -35,7 +36,7 @@ Returns: "Impossible"
      */
     public  String canObtain(String initial, String target){
 
-        Deque<String> targetQueue = new ArrayDeque();
+        @SuppressWarnings("unchecked") Deque<String> targetQueue = new ArrayDeque();
         targetQueue.addLast(target);
         while (targetQueue.size()>0){
             String firstElement = targetQueue.removeFirst();

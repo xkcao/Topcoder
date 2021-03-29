@@ -23,7 +23,7 @@ Five characters is too short for this value of K.
 Returns: "CABBACCBAABCBBB"
      */
 
-    class Combination{
+    static class Combination{
         int a;
         int b;
         int c;
@@ -39,15 +39,9 @@ Returns: "CABBACCBAABCBBB"
 
         StringBuilder s = new StringBuilder();
 
-        for(int i=1;i<=aNum;i++){
-            s.append('A');
-        }
-        for(int i=1;i<=bNum;i++){
-            s.append('B');
-        }
-        for(int i=1;i<=cNum;i++){
-            s.append('C');
-        }
+        s.append("A".repeat(Math.max(0, aNum)));
+        s.append("B".repeat(Math.max(0, bNum)));
+        s.append("C".repeat(Math.max(0, cNum)));
 
         while (getNumberOfPairs(s.toString())>K){
             reduce1Pair(s);
