@@ -15,8 +15,12 @@ public class Main {
 //        ABC abc = new ABC();
 //        System.out.println(abc.createString(15,36));
 
-        ABCPath abcPath = new ABCPath();
-        String[] grid = { "BCDEFGHIJKLMNOPQRSTUVWXYZ" };
-        System.out.println(abcPath.length(grid));
+//        ABCPath abcPath = new ABCPath();
+//        String[] grid = { "BCDEFGHIJKLMNOPQRSTUVWXYZ" };
+//        System.out.println(abcPath.length(grid));
+
+        ABoardGame aBoardGame = new ABoardGame();
+        String[] board = {"..", ".."};
+        System.out.println(aBoardGame.whoWins(board));
     }
 }
