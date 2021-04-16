@@ -19,8 +19,8 @@ public class Main {
 //        String[] grid = { "BCDEFGHIJKLMNOPQRSTUVWXYZ" };
 //        System.out.println(abcPath.length(grid));
 
-        ABoardGame aBoardGame = new ABoardGame();
-        String[] board = {"..", ".."};
-        System.out.println(aBoardGame.whoWins(board));
+//        ABoardGame aBoardGame = new ABoardGame();
+//        String[] board = {"..", ".."};
+//        System.out.println(aBoardGame.whoWins(board));
     }
 }
