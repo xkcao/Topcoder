@@ -22,5 +22,11 @@ public class Main {
 //        ABoardGame aBoardGame = new ABoardGame();
 //        String[] board = {"..", ".."};
 //        System.out.println(aBoardGame.whoWins(board));
+
+        ASCIISum asciiSum = new ASCIISum();
+        System.out.println(asciiSum.total(  3));
+        System.out.println(asciiSum.total(  6));
+        System.out.println(asciiSum.total(  10));
+        System.out.println(asciiSum.total(  400000000));
     }
 }
