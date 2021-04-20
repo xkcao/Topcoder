@@ -23,10 +23,13 @@ public class Main {
 //        String[] board = {"..", ".."};
 //        System.out.println(aBoardGame.whoWins(board));
 
-        ASCIISum asciiSum = new ASCIISum();
-        System.out.println(asciiSum.total(  3));
-        System.out.println(asciiSum.total(  6));
-        System.out.println(asciiSum.total(  10));
-        System.out.println(asciiSum.total(  400000000));
+//        ASCIISum asciiSum = new ASCIISum();
+//        System.out.println(asciiSum.total(  3));
+//        System.out.println(asciiSum.total(  6));
+//        System.out.println(asciiSum.total(  10));
+//        System.out.println(asciiSum.total(  400000000));
+        ASeries aSeries = new ASeries();
+        int[] input = {3,8,4,5,6,2,2};
+        System.out.println(aSeries.longest(input));
     }
 }
