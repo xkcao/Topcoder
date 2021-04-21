@@ -28,8 +28,18 @@ public class Main {
 //        System.out.println(asciiSum.total(  6));
 //        System.out.println(asciiSum.total(  10));
 //        System.out.println(asciiSum.total(  400000000));
-        ASeries aSeries = new ASeries();
-        int[] input = {3,8,4,5,6,2,2};
-        System.out.println(aSeries.longest(input));
+
+//        ASeries aSeries = new ASeries();
+//        int[] input = {3,8,4,5,6,2,2};
+//        System.out.println(aSeries.longest(input));
+
+        ATaleOfThreeCities aTaleOfThreeCities = new ATaleOfThreeCities();
+        int[] ax = {0,0,0};
+        int[] ay = {0,1,2};
+        int[] bx = {2,3};
+        int[] by = {1,1};
+        int[] cx = {1,5};
+        int[] cy = {3,28};
+        System.out.println(aTaleOfThreeCities.connect(ax,ay,bx,by,cx,cy));
     }
 }
