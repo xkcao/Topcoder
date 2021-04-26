@@ -51,7 +51,7 @@ Returns: 54204.93356505282
     public double expectedGain(int[] prob, int[] value){
         double expectedGain=0;
         for(int i=0;i<prob.length-1;i++){
-            expectedGain += value[i]*1000/prob[i+1];
+            expectedGain += value[i]*1000/((double)prob[i+1]);
         }
         expectedGain += value[value.length-1];
 
