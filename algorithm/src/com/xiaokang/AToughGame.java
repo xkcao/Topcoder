@@ -49,12 +49,29 @@ Returns: 1067.6666666666667
 Returns: 54204.93356505282
      */
     public double expectedGain(int[] prob, int[] value){
-        double expectedGain=0;
-        for(int i=0;i<prob.length-1;i++){
-            expectedGain += value[i]*1000/((double)prob[i+1]);
+        int N = prob.length;
+        int[] sum = new int[N + 1];
+        for (int i = 0; i < N; ++i) {
+            sum[i + 1] = sum[i] + value[i];
         }
-        expectedGain += value[value.length-1];
-
-        return expectedGain;
+        double[] dieProb = new double[N];
+        double live = 1;
+        for (int i = 0; i < N; ++i) {
+            dieProb[i] = live * (1000 - prob[i]) / 1000;
+            live -= dieProb[i];
+        }
+        double[] exp = new double[N];
+        for (int i = 0; i < N; ++i) {
+            double other = 0;
+            for (int j = 0; j < i; ++j) {
+                other += exp[j] * dieProb[j];
+            }
+            exp[i] = (sum[i] + other) / (1 - dieProb[i]);
+        }
+        double ret = sum[N];
+        for (int i = 0; i < N; ++i) {
+            ret += exp[i] * dieProb[i];
+        }
+        return ret;
     }
 }
