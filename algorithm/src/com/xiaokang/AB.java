@@ -3,6 +3,7 @@ package com.xiaokang;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("JavaDoc")
 public class AB {
     /*
 0)
