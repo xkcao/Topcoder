@@ -2,9 +2,9 @@ package com.xiaokang;
 
 import java.util.Arrays;
 
-@SuppressWarnings("CommentedOutCode")
 public class Main {
 
+    @SuppressWarnings("CommentedOutCode")
     public static void main(String[] args) {
 	// write your code here
         System.out.println("hello Topcoder algorithm!");
@@ -62,9 +62,15 @@ public class Main {
 //        int[] value4={1000,1};
 //        System.out.println("Expected Gain4="+aToughGame.expectedGain(prob4,value4));
 
-        Aaagmnrs aaagmnrs = new Aaagmnrs();
-        String[] input1 = {"Aaagmnrs", "TopCoder", "anagrams", "Drop Cote" };
-        String[] output1 = aaagmnrs.anagrams(input1);
+//        Aaagmnrs aaagmnrs = new Aaagmnrs();
+//        String[] input1 = {"Aaagmnrs", "TopCoder", "anagrams", "Drop Cote" };
+//        String[] output1 = aaagmnrs.anagrams(input1);
+//        System.out.println(Arrays.toString(output1));
+
+        Abacus abacus = new Abacus();
+        String[] input1 = {"ooo---oooooo", "---ooooooooo", "---ooooooooo", "---ooooooooo", "oo---ooooooo", "---ooooooooo"};
+        int val1 = 5;
+        String[] output1 = abacus.add(input1,val1);
         System.out.println(Arrays.toString(output1));
     }
 }
