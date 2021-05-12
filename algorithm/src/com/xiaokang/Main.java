@@ -67,10 +67,17 @@ public class Main {
 //        String[] output1 = aaagmnrs.anagrams(input1);
 //        System.out.println(Arrays.toString(output1));
 
-        Abacus abacus = new Abacus();
-        String[] input1 = {"ooo---oooooo", "---ooooooooo", "---ooooooooo", "---ooooooooo", "oo---ooooooo", "---ooooooooo"};
-        int val1 = 5;
-        String[] output1 = abacus.add(input1,val1);
+//        Abacus abacus = new Abacus();
+//        String[] input1 = {"ooo---oooooo", "---ooooooooo", "---ooooooooo", "---ooooooooo", "oo---ooooooo", "---ooooooooo"};
+//        int val1 = 5;
+//        String[] output1 = abacus.add(input1,val1);
+//        System.out.println(Arrays.toString(output1));
+
+        AbsSequence absSequence = new AbsSequence();
+        String first1 = "710370";
+        String second1 = "177300";
+        String[] indices1={"5","95","164721","418","3387","710","0","1197","19507","5848"};
+        String[] output1 = absSequence.getElements(first1,second1,indices1);
         System.out.println(Arrays.toString(output1));
     }
 }
